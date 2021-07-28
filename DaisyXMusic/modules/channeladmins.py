@@ -46,7 +46,7 @@ async def pause(_, message: Message):
         await message.reply_text("Currently❗ Nothing is playing! via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     else:
         callsmusic.pytgcalls.pause_stream(chat_id)
-        await message.reply_text("▶️ Music Paused!")
+        await message.reply_text("▶️ Music Paused!on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
 
 @Client.on_message(filters.command(["channelresume","cresume"]) & filters.group & ~filters.edited)
@@ -64,10 +64,10 @@ async def resume(_, message: Message):
     if (chat_id not in callsmusic.pytgcalls.active_calls) or (
         callsmusic.pytgcalls.active_calls[chat_id] == "playing"
     ):
-        await message.reply_text("❗ Nothing is paused!")
+        await message.reply_text("Currently❗ Nothing is paused!via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ Resumed!")
+        await message.reply_text("⏸ Music Resumed!on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
 
 @Client.on_message(filters.command(["channelend","cend"]) & filters.group & ~filters.edited)
@@ -83,7 +83,7 @@ async def stop(_, message: Message):
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is streaming!")
+        await message.reply_text("Currently❗ Nothing is streaming! via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -91,7 +91,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("❌ Stopped streaming!")
+        await message.reply_text("❌ Stopped streaming! on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
 
 @Client.on_message(filters.command(["channelskip","cskip"]) & filters.group & ~filters.edited)
@@ -108,7 +108,7 @@ async def skip(_, message: Message):
       return    
     chat_id = chid
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is playing to skip!")
+        await message.reply_text("❗ Nothing is playing to skip! 🚨 Bad request 🚨")
     else:
         callsmusic.queues.task_done(chat_id)
 
