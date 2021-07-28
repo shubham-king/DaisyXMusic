@@ -66,7 +66,7 @@ async def resume(_, message: Message):
         await message.reply_text("Currently❗ Nothing is paused! via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     else:
         callsmusic.pytgcalls.resume_stream(chat_id)
-        await message.reply_text("⏸ Music Resumed!")
+        await message.reply_text("⏸ Music Resumed!on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -75,7 +75,7 @@ async def resume(_, message: Message):
 async def stop(_, message: Message):
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is streaming!")
+        await message.reply_text("Currently❗ Nothing is streaming! via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     else:
         try:
             callsmusic.queues.clear(chat_id)
@@ -83,7 +83,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text("❌ Stopped streaming!")
+        await message.reply_text("❌ Stopped streaming!on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -93,7 +93,7 @@ async def skip(_, message: Message):
     global que
     chat_id = get_chat_id(message.chat)
     if chat_id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is playing to skip!")
+        await message.reply_text("❗ Nothing is playing to skip! Bad request 🚨")
     else:
         callsmusic.queues.task_done(chat_id)
 
