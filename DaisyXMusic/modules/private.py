@@ -38,7 +38,7 @@ def _start(client, message):
                         "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🎶Music Group🎶", url=f"https://t.me/Music_Enviroment)
+                        "🎶Music Group🎶", url=f"https://t.me/Music_Enviroment")
                 ]
             ]
         ),
