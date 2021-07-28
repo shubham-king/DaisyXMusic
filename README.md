@@ -2,7 +2,7 @@
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@DaisyXbot](https://t.me/daisyxbot)
+### Available on telegram as [@shubhammusic](https://t.me/shubham_music_team)
 
 <p align="center">
   <img src="https://telegra.ph/file/8cec160cabf003064b6c2.jpg">
