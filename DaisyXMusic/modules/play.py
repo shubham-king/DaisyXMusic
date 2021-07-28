@@ -457,7 +457,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 **Processing** your song via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -512,7 +512,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("🔎 **Finding** on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -565,7 +565,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 **Processing** on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -609,7 +609,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 **Processing** on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -720,7 +720,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="▶️ **Playing** here the song requested by {} via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ 😜".format(
                 message.from_user.mention()
             ),
         )
@@ -733,7 +733,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 **Processing** on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -787,7 +787,7 @@ async def ytplay(_, message: Message):
             f"<i> {user.first_name} Userbot not in this chat, Ask admin to send /play command for first time or add {user.first_name} manually</i>"
         )
         return
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("🔎 **Finding** on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -796,7 +796,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 **Processing**")
+    await lel.edit("🎵 **Processing** on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -868,7 +868,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="▶️ **Playing** here the song requested by {} via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ 😜".format(
                 message.from_user.mention()
             ),
         )
@@ -880,7 +880,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **Processing** on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -987,7 +987,7 @@ async def deezer(client: Client, message_: Message):
         qeue.append(appendable)
         await res.edit_text(f"✯{bn}✯= #️⃣ Queued at position {position}")
     else:
-        await res.edit_text(f"✯{bn}✯=▶️ Playing.....")
+        await res.edit_text(f"✯{bn}✯=▶️ Playing..... on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
@@ -1018,7 +1018,7 @@ async def jiosaavn(client: Client, message_: Message):
     global que
     if message_.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **Processing** on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1061,7 +1061,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add Assistance to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -1131,7 +1131,7 @@ async def jiosaavn(client: Client, message_: Message):
         )
 
     else:
-        await res.edit_text(f"{bn}=▶️ Playing.....")
+        await res.edit_text(f"{bn}=▶️ Playing..... on request via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
         que[chat_id] = []
         qeue = que.get(chat_id)
         s_name = sname
@@ -1256,7 +1256,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"▶️ **Playing** here the song requested by {r_by.mention} via Youtube Music 😜",
+            caption=f"▶️ **Playing** here the song requested by {r_by.mention} via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ 😜",
         )
         
         os.remove("final.png")
