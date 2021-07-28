@@ -363,7 +363,7 @@ async def m_cb(b, cb):
 @authorized_users_only
 async def play(_, message: Message):
     global que
-    lel = await message.reply("🔄 **Processing**")
+    lel = await message.reply("🔄 **Processing** via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
     try:
       conchat = await _.get_chat(message.chat.id)
@@ -428,7 +428,7 @@ async def play(_, message: Message):
     message.from_user.id
     text_links = None
     message.from_user.first_name
-    await lel.edit("🔎 **Finding**")
+    await lel.edit("🔎 **Finding** via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     message.from_user.id
     user_id = message.from_user.id
     message.from_user.first_name
@@ -483,7 +483,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 **Processing** via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -527,7 +527,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 **Processing**")
+        await lel.edit("🎵 **Processing** via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -596,7 +596,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** the song requested by {} via Youtube Music 😜 in Linked Channel".format(
+            caption="▶️ **Playing** the song requested by {} via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ 😜 in Linked Channel".format(
                 message.from_user.mention()
             ),
         )
@@ -608,7 +608,7 @@ async def play(_, message: Message):
 @authorized_users_only
 async def deezer(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **Processing** via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
     try:
       conchat = await client.get_chat(message_.chat.id)
@@ -714,7 +714,7 @@ async def deezer(client: Client, message_: Message):
         qeue.append(appendable)
         await res.edit_text(f"✯{bn}✯= #️⃣ Queued at position {position}")
     else:
-        await res.edit_text(f"✯{bn}✯=▶️ Playing.....")
+        await res.edit_text(f"✯{bn}✯=▶️ Playing..... via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
@@ -740,7 +740,7 @@ async def deezer(client: Client, message_: Message):
 @authorized_users_only
 async def jiosaavn(client: Client, message_: Message):
     global que
-    lel = await message_.reply("🔄 **Processing**")
+    lel = await message_.reply("🔄 **Processing** via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
     try:
       conchat = await client.get_chat(message_.chat.id)
       conid = conchat.linked_chat.id
@@ -790,7 +790,7 @@ async def jiosaavn(client: Client, message_: Message):
                     # print(e)
                     await lel.edit(
                         f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your channel due to heavy requests for userbot! Make sure user is not banned in group."
-                        "\n\nOr manually add @DaisyXmusic to your Group and try again</b>",
+                        "\n\nOr manually add Assistance to your Group and try again</b>",
                     )
     try:
         await USER.get_chat(chid)
@@ -853,7 +853,7 @@ async def jiosaavn(client: Client, message_: Message):
         )
 
     else:
-        await res.edit_text(f"{bn}=▶️ Playing.....")
+        await res.edit_text(f"{bn}=▶️ Playing..... via ＳＨＵＢＨΛＭ ⌬ ＭＵＳＩＣ")
         que[chat_id] = []
         qeue = que.get(chat_id)
         s_name = sname
